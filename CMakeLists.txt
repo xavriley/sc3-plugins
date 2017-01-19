@@ -6,6 +6,10 @@ if (NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/external_libraries/nova-simd/simd_mem
   message(FATAL_ERROR "nova-simd submodule is missing: please run `git submodule init && git submodule update' from the toplevel of your git working tree")
 endif()
 
+if(NOT EXISTS ${SOUNDPIPEDIR}/h/base.h)
+  message(FATAL_ERROR "Should use git submodule update and git submodule init to get Soundpipe")
+endif()
+
 if (NOT SYSTEM_STK)
   if (NOT EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/external_libraries/stk/include/Stk.h)
     message(FATAL_ERROR "stk submodule is missing: please run `git submodule init && git submodule update' from the toplevel of your git working tree")

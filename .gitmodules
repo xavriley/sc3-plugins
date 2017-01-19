@@ -4,3 +4,6 @@
 [submodule "external_libraries/stk"]
 	path = external_libraries/stk
 	url = https://github.com/thestk/stk.git
+[submodule "external_libraries/Soundpipe"]
+	path = external_libraries/Soundpipe
+	url = https://github.com/PaulBatchelor/Soundpipe.git

@@ -1,0 +1,33 @@
+CLASS:: Padsynth
+summary:: an implementation of the PADSynth algorithm by Nasca Octavian Paul
+categories:: Libraries>SoundpipeUGens,UGens/FFT
+
+DESCRIPTION::
+A port of the implementation of the PADSynth algorithm http://zynaddsubfx.sourceforge.net/doc/PADsynth/PADsynth.htm from the Soundpipe library by Paul Butcher https://github.com/PaulBatchelor/Soundpipe. Configured to a "choir" type of pad sound.
+
+
+CLASSMETHODS::
+
+METHOD::ar
+
+argument::freq
+Frequency of fundamental in Hz
+
+argument::bw
+Bandwidth of each harmonic
+
+argument::num_harmonics
+Number of harmonics
+
+argument::mul
+
+argument::add
+
+Examples::
+
+NB Due to the nature of the algorithm, the sound is produced by writing a wavetable in the initialization phase. This means that arguments cannot be varied over time to change the sound.
+
+code::
+{ Padsynth.ar(72.midicps, 40, 64) }.play
+::
+
